@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<form action="" method="POST">
+    {%csrf_token%}
+    {{form.nama_produk|as_crispy_field}}
+    <div class="row">
+        <div class="col-md-6">
+            {{form.harga|as_crispy_field}}
+        </div>
+        <div class="col-md-6">
+             {{form.stock|as_crispy_field}}
+        </div>
+    </div>
+    {{form.kondisi|as_crispy_field}}
+    <div class="row">
+        <div class="col-8">
+            <button type="submit" class="btn btn-success">
+                Tambah
+            </button>
+        </div>
+        <div class="col-4">
+            <a href="{% url 'tampil_produk' %}" class="btn-secondary btn-block btn lg">
+                Batal
+            </a>
+        </div>
+    </div>
+</form>
+{% endblock content %}

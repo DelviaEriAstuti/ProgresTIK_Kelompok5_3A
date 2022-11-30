@@ -23,7 +23,7 @@ from pesanan.views import pesanan
 from produk.views import produk
 from profil.views import profil
 from saldo.views import saldo
-from registrasi.views import registrasi
+from login.views import login
 
 
 
@@ -39,7 +39,7 @@ urlpatterns = [
     path('produk/', produk),
     path('profil/', profil),
     path('saldo/', saldo),
-    path('registrasi/', registrasi),
+    path('registrasi/', login),
 
 
 
